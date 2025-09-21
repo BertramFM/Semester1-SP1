@@ -11,7 +11,7 @@ String[] groupDFiles = {"argentina.png", "iceland.png", "croatia.png", "nigeria.
 Group groupA, groupB, groupC, groupD;
 
 void setup() {
-  size(965, 420);
+  size(960, 420);
   background(#1d314c);
 
   for (int i = 0; i < 4; i++) {
@@ -23,6 +23,12 @@ void setup() {
 }
 
 void draw() {
-  groupA = new Group("GROUP A", groupAFiles, groupAFlags, 25, 25);
+  groupA = new Group("GROUP A", groupAFiles, groupAFlags, 0, 25);
+  groupB = new Group("GROUP B", groupBFiles, groupBFlags, 0, 240);
+  groupC = new Group("GROUP C", groupCFiles, groupCFlags, 485, 25);
+  groupD = new Group("GROUP D", groupDFiles, groupDFlags, 485, 240);
   groupA.display();
+  groupB.display();
+  groupC.display();
+  groupD.display();
 }

@@ -7,6 +7,7 @@ class Group {
   int boxW = 470;
   int boxH = 40;
 
+
   Group(String groupName, String[] teamName, PImage[] teamFlag, float x, float y) {
     this.groupName = groupName;
     this.teamName = teamName;
@@ -16,25 +17,20 @@ class Group {
   }
 
   void display() {
+    //group name
     textSize(22);
     textAlign(CENTER);
-    text(groupName,x+235,y-5);
-    
+    text(groupName, x+235, y-5);
+
+    //Boxes
     for (int i = 0; i < teamName.length; i++) {
       fill(255);
-    //  noStroke();
+      //  noStroke();
       rect(x, y+(i*(boxH+5)), boxW, boxH);
-      
+
       image(teamFlag[i], x+1, (y+1) + i * (boxH + 5), 77, 39);
     }
-    
-
-    
+    //middle line, propably going to replace with a box instead
+    line(width/2, 0, width/2, height);
   }
 }
-  /*
-    rect(0, 30, 470, 40);
-   rect(0, 75, 470, 40);
-   rect(0, 120, 470, 40);
-   rect(0, 165, 470, 40);
-   */
