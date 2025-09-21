@@ -1,5 +1,5 @@
 class Group {
-  String name;
+  String groupName;
   String[] teamName;
   PImage[] teamFlag;
   float x; 
@@ -7,12 +7,18 @@ class Group {
   int boxW = 470;
   int boxH = 40;
   
-  
-  
-  Group() {
+  Group(String groupName, String[] teamName, PImage[] teamFlag, float x, float y) {
+  this.groupName = groupName;
+  this.teamName = teamName;
+  this.teamFlag = teamFlag;
+  this.x = x;
+  this.y = y;
+  }
+}
+
+/*
     rect(0, 30, 470, 40);
     rect(0, 75, 470, 40);
     rect(0, 120, 470, 40);
     rect(0, 165, 470, 40);
-  }
-}
+    */
