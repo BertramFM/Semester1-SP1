@@ -10,6 +10,9 @@ String[] groupDFiles = {"argentina.png", "iceland.png", "croatia.png", "nigeria.
 
 Group groupA, groupB, groupC, groupD;
 
+color blue = #12d2f3;
+color yellow = #f5f722;
+
 void setup() {
   size(960, 420);
   background(#1d314c);
@@ -23,10 +26,10 @@ void setup() {
 }
 
 void draw() {
-  groupA = new Group("GROUP A", groupAFiles, groupAFlags, 0, 25);
-  groupB = new Group("GROUP B", groupBFiles, groupBFlags, 0, 240);
-  groupC = new Group("GROUP C", groupCFiles, groupCFlags, 485, 25);
-  groupD = new Group("GROUP D", groupDFiles, groupDFlags, 485, 240);
+  groupA = new Group("GROUP A", groupAFiles, groupAFlags, 0, 25, blue);
+  groupB = new Group("GROUP B", groupBFiles, groupBFlags, 0, 240, yellow);
+  groupC = new Group("GROUP C", groupCFiles, groupCFlags, 485, 25, blue);
+  groupD = new Group("GROUP D", groupDFiles, groupDFlags, 485, 240, yellow);
   groupA.display();
   groupB.display();
   groupC.display();
