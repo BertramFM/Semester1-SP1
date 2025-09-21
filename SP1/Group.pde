@@ -5,7 +5,7 @@ class Group {
   float x;
   float y;
   int boxW = 470;
-  int boxH = 36;
+  int boxH = 40;
 
   Group(String groupName, String[] teamName, PImage[] teamFlag, float x, float y) {
     this.groupName = groupName;
@@ -23,9 +23,9 @@ class Group {
     for (int i = 0; i < teamName.length; i++) {
       fill(255);
     //  noStroke();
-      rect(x, y+i*boxH, boxW, boxH);
+      rect(x, y+(i*(boxH+5)), boxW, boxH);
       
-      image(teamFlag[i], x + 5, y + i * boxH + 5, 40, 40);
+      image(teamFlag[i], x+1, (y+1) + i * (boxH + 5), 77, 39);
     }
     
 
