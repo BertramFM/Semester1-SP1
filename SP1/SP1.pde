@@ -23,8 +23,6 @@ void setup() {
 }
 
 void draw() {
-  rect(0, 30, 470, 40);
-  rect(0, 75, 470, 40);
-  rect(0, 120, 470, 40);
-  rect(0, 165, 470, 40);
+  groupA = new Group("GROUP A", groupAFiles, groupAFlags, 25, 25);
+  groupA.display();
 }
