@@ -14,7 +14,7 @@ color blue = #12d2f3;
 color yellow = #f5f722;
 
 void setup() {
-  size(960, 420);
+  size(970, 420);
   background(#1d314c);
 
   for (int i = 0; i < 4; i++) {
