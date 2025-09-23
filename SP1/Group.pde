@@ -30,17 +30,20 @@ class Group {
     for (int i = 0; i < teamName.length; i++) {
       fill(255);
       rect(x, y+(i*(boxH+5)), boxW, boxH);
+      //circle(x, y+(i*(boxH+5)), 10);
+
 
       image(teamFlag[i], x, y + i * (boxH + 5), 80, 40);
 
-      // i need to change the thickness of letters + CAPS start letter
-      textAlign(LEFT);
+      textAlign(LEFT, CENTER);
       fill(0);
       textSize(30);
+      // circle(x + boxW/4, y+(i*(boxH+5)+boxH/2), 10);
 
       String abreviatedName = teamName[i].substring(0, teamName[i].length() -4);
-      text(abreviatedName.toUpperCase(), x + 100, y + i * boxH + boxH/2);
+      text(abreviatedName.toUpperCase(), x + boxW/4, y+i*(boxH+5)+boxH/2);
     }
+    
 
 
 
