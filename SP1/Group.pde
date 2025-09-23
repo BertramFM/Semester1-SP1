@@ -19,7 +19,7 @@ class Group {
   }
 
   void display() {
-    //group name
+    //Group
     textSize(22);
     textAlign(CENTER);
     fill(c);
@@ -32,14 +32,20 @@ class Group {
       rect(x, y+(i*(boxH+5)), boxW, boxH);
 
       image(teamFlag[i], x, y + i * (boxH + 5), 80, 40);
-      
+
       // teamNames, need to use substring to remove .png and
       // i need to change the thickness of letters + CAPS start letter
       textAlign(LEFT);
       fill(0);
       textSize(30);
-      text(teamName[i], x + 100, y + i * boxH + boxH/2);
+
+
+      String abreviatedName = teamName[i].substring(0, teamName[i].length() -4);
+      text(abreviatedName.toUpperCase(), x + 100, y + 10 + i * boxH + boxH/2);
     }
+
+
+
     //middle line, propably going to replace with a box instead
     line(width/2, 0, width/2, height);
   }
