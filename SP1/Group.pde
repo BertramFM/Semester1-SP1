@@ -4,7 +4,7 @@ class Group {
   PImage[] teamFlag;
   float x;
   float y;
-  int boxW = 470;
+  int boxW = width/2-15;
   int boxH = 40;
   color c;
 
@@ -25,29 +25,29 @@ class Group {
     fill(c);
     text(groupName, x+235, y-5);
     noStroke();
+    
+    // middle line
+    fill(255);
+    rect(width/2-5, 0, 5, height);
 
     //Boxes
     for (int i = 0; i < teamName.length; i++) {
+
+      // Draws a box for the amount of names in each category
       fill(255);
       rect(x, y+(i*(boxH+5)), boxW, boxH);
-      //circle(x, y+(i*(boxH+5)), 10);
 
-
+      // Place a flag in each box
+      // The 5 in (boxH + 5) is to account for the space between each box
       image(teamFlag[i], x, y + i * (boxH + 5), 80, 40);
 
-      textAlign(LEFT, CENTER);
+
       fill(0);
       textSize(30);
-      // circle(x + boxW/4, y+(i*(boxH+5)+boxH/2), 10);
-
+      textAlign(LEFT, CENTER);
       String abreviatedName = teamName[i].substring(0, teamName[i].length() -4);
       text(abreviatedName.toUpperCase(), x + boxW/4, y+i*(boxH+5)+boxH/2);
     }
-    
 
-
-
-    //middle line, propably going to replace with a box instead
-    line(width/2, 0, width/2, height);
   }
 }
