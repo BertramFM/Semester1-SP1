@@ -36,6 +36,8 @@ class Group {
       // Draws a box for the amount of names in each category
       fill(255);
       rect(x, y+(i*(boxH+5)), boxW, boxH);
+      fill(c);
+      rect(x+boxW-15, y+(i*(boxH+5)), 15, boxH);
 
       // Place a flag in each box
       // The 5 in (boxH + 5) is to account for the space between each box
