@@ -23,13 +23,12 @@ void setup() {
     groupCFlags[i] = loadImage(groupCFiles[i]);
     groupDFlags[i] = loadImage(groupDFiles[i]);
   }
-}
-
-void draw() {
+  
   groupA = new Group("GROUP A", groupAFiles, groupAFlags, 0, 25, blue);
   groupB = new Group("GROUP B", groupBFiles, groupBFlags, 0, 240, yellow);
   groupC = new Group("GROUP C", groupCFiles, groupCFlags, width/2+10, 25, blue);
   groupD = new Group("GROUP D", groupDFiles, groupDFlags, width/2+10, 240, yellow);
+  
   groupA.display();
   groupB.display();
   groupC.display();
